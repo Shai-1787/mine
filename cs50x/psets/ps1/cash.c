@@ -10,7 +10,6 @@ int main(void)
         {
             int c;
 
-            // 清除输入缓冲区中的非整数内容
             while ((c = getchar()) != '\n' && c != EOF)
             {
             }
