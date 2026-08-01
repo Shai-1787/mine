@@ -5,9 +5,9 @@
 
 int only_digits(char *str);
 
-int main(int arvc, char *argv[])
+int main(int argc, char *argv[])
 {
-    if (arvc != 2)
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -26,7 +26,7 @@ int main(int arvc, char *argv[])
 
     char ciphertext[1000];
     int i;
-    for (i = 0; i < plaintext[i] != 0; i++)
+    for (i = 0; plaintext[i] != 0; i++)
     {
         //ciphertext[i] = (plaintext[i] + key) % 26
         if (isupper(plaintext[i]))
@@ -42,7 +42,7 @@ int main(int arvc, char *argv[])
             ciphertext[i] = plaintext[i];
         }
     }
-    ciphertext[i + 1] = '\0';
+    ciphertext[i] = '\0';
     printf("ciphertext: %s\n", ciphertext);
 
     return 0;
